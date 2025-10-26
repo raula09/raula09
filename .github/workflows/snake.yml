@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *" # runs every day at midnight
+    - cron: "0 0 * * *" # every day at midnight
   workflow_dispatch:
   push:
     branches:
@@ -12,6 +12,9 @@ jobs:
   generate:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,7 +22,7 @@ jobs:
       - name: Generate Snake SVG
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: RaulAlazovi069
+          github_user_name: raula09
           outputs: dist/github-contribution-grid-snake.svg
 
       - name: Deploy Snake to output branch
