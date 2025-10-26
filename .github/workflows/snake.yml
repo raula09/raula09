@@ -1,8 +1,8 @@
-name: Generate Snake
+name: Generate Cool Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *" # every day at midnight
+    - cron: "0 0 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -19,11 +19,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate Snake SVG
-        uses: Platane/snk/svg-only@v3
+      - name: Generate colorful snake
+        uses: Platane/snk@v3
         with:
           github_user_name: raula09
-          outputs: dist/github-contribution-grid-snake.svg
+          outputs: |
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?palette=github-light
+          color_snake: "00e0ff"
+          color_dots: "#0d1117, #39ff14, #00e0ff, #ff00c8, #ffffff"
 
       - name: Deploy Snake to output branch
         uses: crazy-max/ghaction-github-pages@v4
