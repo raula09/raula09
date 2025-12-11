@@ -6,7 +6,7 @@ My name is Raul and I'm a Full-Stack Developer from Georgia, Tbilisi
 
 ✨ Creating bugs since 2024  
 💻 Currently learning how to build AI-oriented websites  
-🧠 Passionate about C#, React, and modern web technologies  
+🧠 Passionate about .Net, React, modern web and app technologies  
 🎯 Goals: mastering AI-driven full-stack development  
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=raula09&layout=compact&theme=tokyonight)
